@@ -11,6 +11,6 @@
 <title>Online shopping</title>
 </head>
 <body>
-	${contextRoot} says--	${greeting}
+	${contextRoot} says--${greeting}
 </body>
 </html>
