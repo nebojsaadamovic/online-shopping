@@ -13,10 +13,67 @@ public class PageController {
 	public ModelAndView index() {
 		
 		ModelAndView mv=new ModelAndView("page");
-		mv.addObject("greeting", "wELCOME TO sPRING WEB mvc");
+		mv.addObject("title", "Home");
+		mv.addObject("userClickHome", true);
 		return mv;
 		
 	}
+	
+	
+	@RequestMapping( value ="/about")
+	public ModelAndView about() {
+		
+		ModelAndView mv=new ModelAndView("page");
+		mv.addObject("userClickAbout", true);
+		mv.addObject("title", "About");
+		return mv;
+		
+	}
+	
+	
+	@RequestMapping(value = "/contact")
+	public ModelAndView contact() {
+		
+		ModelAndView mv=new ModelAndView("page");
+		mv.addObject("title", "Contact");
+		mv.addObject("userClickContact", true);
+		return mv;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	/*
 	  //  @RequestParam	
@@ -28,7 +85,7 @@ public class PageController {
 		mv.addObject("greeting", greeting);
 		return mv;
 	}
-	*/
+
 	
       //  @PathVariable
 	@RequestMapping(value = "/test/{greeting}")
@@ -39,5 +96,5 @@ public class PageController {
 		mv.addObject("greeting", greeting);
 		return mv;
 	}
-	
+		*/
 }
