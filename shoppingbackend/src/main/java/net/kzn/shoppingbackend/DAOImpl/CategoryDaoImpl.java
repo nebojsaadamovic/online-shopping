@@ -20,14 +20,14 @@ public class CategoryDaoImpl implements CategoryDAO {
 		category.setImageUrl("CAT_1.png");
 		categories.add(category);
 		
-		Category category=new Category();
+		
 		category.setID(2);
 		category.setName("Mobile");
 		category.setDescription("this is mobile");
 		category.setImageUrl("CAT_2.png");
 		categories.add(category);
 		
-		Category category=new Category();
+		
 		category.setID(1);
 		category.setName("Lap top");
 		category.setDescription("thi is computer");
@@ -39,7 +39,7 @@ public class CategoryDaoImpl implements CategoryDAO {
 	
 	
 	
-	
+	@Override
 	public List<Category> list() {		
 		return categories;
 	}
