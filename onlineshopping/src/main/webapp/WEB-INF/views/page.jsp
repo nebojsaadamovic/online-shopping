@@ -4,9 +4,9 @@
    <%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
    <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
    
-   <spring:url var="css"  value="/resources/css"/>
-   <spring:url var="js"  value="/resources/js"/>
-   <spring:url var="images"  value="/resources/images"/>
+  <spring:url var="css" value="/resources/css/" />
+  <spring:url var="js" value="/resources/js/" />
+  <spring:url var="images" value="/resources/images/" />
    
    
    <c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
@@ -30,6 +30,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.css" rel="stylesheet">
+    
+     <!-- Bootstrap Readable Theme for navigation bottom -->
+    <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <link href="${css}/myapp.css" rel="stylesheet">
@@ -37,7 +40,11 @@
 </head>
 
 <body>
-					<!-- nAVIGATION -->
+
+	<div class="wrapper">
+	
+	
+					<!-- ---------NAVIGATION---------------------- -->
 
    					<%@include file="./shared/navbar.jsp" %>
    					
@@ -46,6 +53,9 @@
    					
    
   	<!--  ----------------------------- PAGE CONTENT ----------------------------- -->
+  	
+  	<div class="content">
+  	
  					<!-- HOME  LOADING  -->
  					<c:if test="${ userClickHome == true }">  
     					<%@include file="./shared/home.jsp" %>
@@ -58,13 +68,15 @@
     				<c:if test="${ userClickContact == true }">  
     					<%@include file="./shared/contact.jsp" %>
     				</c:if>
+    				
+    				
     
-    
+    </div>
     
     
 
     
-                      <!-- FOOTER   -->
+                      <!--------- ---FOOTER ---------------- -->
                       
                   <%@include file="./shared/footer.jsp" %>>
                       
@@ -80,6 +92,8 @@
 	<script src="${js}/myapp.js"></script>
 	
 	
+	
+	</div>
 </body>
 
 </html>
