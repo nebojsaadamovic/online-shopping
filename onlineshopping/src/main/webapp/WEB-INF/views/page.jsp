@@ -32,7 +32,7 @@
     <link href="${css}/bootstrap.css" rel="stylesheet">
     
      <!-- Bootstrap Readable Theme for navigation bottom -->
-    <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="${css}/bootstrap-readable-theme.css">
 
     <!-- Add custom CSS here -->
     <link href="${css}/myapp.css" rel="stylesheet">
