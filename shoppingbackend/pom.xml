@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.vesrion>4.3.6.RELEASE</spring.vesrion>
   </properties>
 
   <dependencies>
@@ -21,6 +22,21 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+     <!-- SPRING -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.vesrion}</version>
+		</dependency>
+    
+    
+    
+    
+    
+    
+    
+    
   </dependencies>
   
   <build>
