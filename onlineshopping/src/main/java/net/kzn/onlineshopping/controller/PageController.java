@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import net.kzn.shoppingbackend.DAO.CategoryDAO;
+import net.kzn.shoppingbackend.DTO.Category;
 
 @Controller
 public class PageController {
@@ -52,6 +53,32 @@ public class PageController {
 	}
 	
 	
+	//show all Products
+	@RequestMapping(value = "/show/all/products")
+	public ModelAndView showAllProducts() {
+		
+		ModelAndView mv=new ModelAndView("page");
+		mv.addObject("title", "All Products");
+		mv.addObject("categories",categoryDAO.list());
+		mv.addObject("userClickAllProducts", true);	
+		return mv;
+	}
+	
+	
+	//show products by category
+	
+	@RequestMapping(value="/show/category/{id}/products")
+	public ModelAndView showCategoryProducts(@PathVariable("id") int id) {
+		ModelAndView mv=new ModelAndView("page");
+		Category category=null;
+		category=categoryDAO.get(id);
+		mv.addObject("title",category.getName());
+		mv.addObject("category", category);		
+		mv.addObject("categories",categoryDAO.list());
+		mv.addObject("userClickCategoryProducts", true);
+			return mv;
+		
+	}
 	
 	
 	
